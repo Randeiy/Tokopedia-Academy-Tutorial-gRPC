@@ -1,0 +1,15 @@
+syntax = "proto3";
+package tutorialproto;
+option go_package = "github.com/Xanvial/tutorial-grpc/example/proto;tutorialproto";
+
+message MessageReq {
+  string body = 1;
+}
+
+message MessageResp {
+  string body = 1;
+}
+
+service ChatService {
+  rpc TestHello(MessageReq) returns (MessageResp) {}
+}
